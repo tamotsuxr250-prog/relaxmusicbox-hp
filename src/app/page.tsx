@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const TUNECORE_URL = "https://www.tunecore.co.jp/artists/RELAX-MUSIC-BOX";
+
 const featuredAlbums = [
   { src: "/images/rain.jpg", title: "Rain (オルゴール)", year: "2026" },
   { src: "/images/spring-graduation.jpg", title: "春の卒業ソングオルゴール", year: "2026" },
@@ -45,7 +47,7 @@ export default function Home() {
           {/* ヒーロー画像グリッド */}
           <div className="grid grid-cols-2 gap-3">
             {featuredAlbums.map((album) => (
-              <div key={album.src} className="aspect-square relative overflow-hidden">
+              <a key={album.src} href={TUNECORE_URL} target="_blank" rel="noopener noreferrer" className="aspect-square relative overflow-hidden block">
                 <Image
                   src={album.src}
                   alt={album.title}
@@ -53,7 +55,7 @@ export default function Home() {
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -92,42 +94,22 @@ export default function Home() {
             </div>
             {/* 事業セクション画像 */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="aspect-square relative overflow-hidden">
-                <Image
-                  src="/images/arigatou.png"
-                  alt="ありがとうの音色オルゴール"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-              <div className="aspect-square relative overflow-hidden">
-                <Image
-                  src="/images/shiroi-koibito.png"
-                  alt="白い恋人達"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-              <div className="aspect-square relative overflow-hidden">
-                <Image
-                  src="/images/prema.jpg"
-                  alt="Prema"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-              <div className="aspect-square relative overflow-hidden">
-                <Image
-                  src="/images/pretender.jpg"
-                  alt="Pretender"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
+              {[
+                { src: "/images/arigatou.png", alt: "ありがとうの音色オルゴール" },
+                { src: "/images/shiroi-koibito.png", alt: "白い恋人達" },
+                { src: "/images/prema.jpg", alt: "Prema" },
+                { src: "/images/pretender.jpg", alt: "Pretender" },
+              ].map((img) => (
+                <a key={img.src} href={TUNECORE_URL} target="_blank" rel="noopener noreferrer" className="aspect-square relative overflow-hidden block">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -173,7 +155,7 @@ export default function Home() {
               { src: "/images/prema.jpg", title: "Prema", year: "2025" },
               { src: "/images/pretender.jpg", title: "Pretender", year: "2025" },
             ].map((album) => (
-              <div key={album.src} className="group">
+              <a key={album.src} href={TUNECORE_URL} target="_blank" rel="noopener noreferrer" className="group block">
                 <div className="aspect-square relative overflow-hidden mb-3">
                   <Image
                     src={album.src}
@@ -183,9 +165,9 @@ export default function Home() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
-                <p className="text-xs font-medium">{album.title}</p>
+                <p className="text-xs font-medium group-hover:text-muted transition-colors">{album.title}</p>
                 <p className="text-[10px] text-muted">{album.year}</p>
-              </div>
+              </a>
             ))}
           </div>
           <div className="mt-10 text-center">

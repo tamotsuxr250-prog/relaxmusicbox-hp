@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     "合同会社RELAXMUSICBOXの音楽配信サービス。Spotify、Apple Music等で癒しのオルゴール音楽を配信中。",
 };
 
+const TUNECORE_URL = "https://www.tunecore.co.jp/artists/RELAX-MUSIC-BOX";
+
 const platforms = [
   { name: "Spotify", url: "https://open.spotify.com/" },
   { name: "Apple Music", url: "https://music.apple.com/" },
@@ -46,7 +48,7 @@ export default function Services() {
         <h2 className="text-xl font-light mb-10">リリース楽曲</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {releases.map((r) => (
-            <div key={r.src} className="group">
+            <a key={r.src} href={TUNECORE_URL} target="_blank" rel="noopener noreferrer" className="group block">
               <div className="aspect-square relative overflow-hidden mb-3">
                 <Image
                   src={r.src}
@@ -56,11 +58,11 @@ export default function Services() {
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
-              <p className="text-xs font-medium">{r.title}</p>
+              <p className="text-xs font-medium group-hover:text-muted transition-colors">{r.title}</p>
               <p className="text-[10px] text-muted">
                 {r.type} / {r.year}
               </p>
-            </div>
+            </a>
           ))}
         </div>
         <div className="mt-10">
