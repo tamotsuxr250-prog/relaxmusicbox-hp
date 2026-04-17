@@ -4,10 +4,10 @@ import Link from "next/link";
 const TUNECORE_URL = "https://www.tunecore.co.jp/artists/RELAX-MUSIC-BOX";
 
 const featuredAlbums = [
+  { src: "/images/sleeping-constellations.jpg", title: "眠りの星座", year: "2026" },
+  { src: "/images/moonlight-window.jpg", title: "窓辺の月光", year: "2026" },
+  { src: "/images/moon-cloud-cradle.jpg", title: "月雲のゆりかご", year: "2026" },
   { src: "/images/rain.jpg", title: "Rain (オルゴール)", year: "2026" },
-  { src: "/images/spring-graduation.jpg", title: "春の卒業ソングオルゴール", year: "2026" },
-  { src: "/images/soothing-ballad.jpg", title: "心やすらぐバラードオルゴール", year: "2025" },
-  { src: "/images/relaxing-kpop.jpg", title: "リラックスK-POPオルゴール", year: "2025" },
 ];
 
 export default function Home() {
@@ -95,10 +95,10 @@ export default function Home() {
             {/* 事業セクション画像 */}
             <div className="grid grid-cols-2 gap-3">
               {[
-                { src: "/images/arigatou.png", alt: "ありがとうの音色オルゴール" },
-                { src: "/images/shiroi-koibito.png", alt: "白い恋人達" },
-                { src: "/images/prema.jpg", alt: "Prema" },
-                { src: "/images/pretender.jpg", alt: "Pretender" },
+                { src: "/images/sleeping-constellations.jpg", alt: "眠りの星座" },
+                { src: "/images/moonlight-window.jpg", alt: "窓辺の月光" },
+                { src: "/images/moon-cloud-cradle.jpg", alt: "月雲のゆりかご" },
+                { src: "/images/rain.jpg", alt: "Rain (オルゴール)" },
               ].map((img) => (
                 <a key={img.src} href={TUNECORE_URL} target="_blank" rel="noopener noreferrer" className="aspect-square relative overflow-hidden block">
                   <Image
@@ -146,14 +146,14 @@ export default function Home() {
           <h2 className="text-2xl font-light mb-12">最新リリース</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
+              { src: "/images/sleeping-constellations.jpg", title: "眠りの星座", year: "2026" },
+              { src: "/images/moonlight-window.jpg", title: "窓辺の月光", year: "2026" },
+              { src: "/images/moon-cloud-cradle.jpg", title: "月雲のゆりかご", year: "2026" },
               { src: "/images/rain.jpg", title: "Rain (オルゴール)", year: "2026" },
               { src: "/images/spring-graduation.jpg", title: "春の卒業ソングオルゴール", year: "2026" },
               { src: "/images/soothing-ballad.jpg", title: "心やすらぐバラードオルゴール", year: "2025" },
               { src: "/images/relaxing-kpop.jpg", title: "リラックスK-POPオルゴール", year: "2025" },
               { src: "/images/arigatou.png", title: "ありがとうの音色オルゴール", year: "2025" },
-              { src: "/images/shiroi-koibito.png", title: "白い恋人達", year: "2025" },
-              { src: "/images/prema.jpg", title: "Prema", year: "2025" },
-              { src: "/images/pretender.jpg", title: "Pretender", year: "2025" },
             ].map((album) => (
               <a key={album.src} href={TUNECORE_URL} target="_blank" rel="noopener noreferrer" className="group block">
                 <div className="aspect-square relative overflow-hidden mb-3">

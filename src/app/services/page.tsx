@@ -18,14 +18,14 @@ const platforms = [
 ];
 
 const releases = [
+  { src: "/images/sleeping-constellations.jpg", title: "眠りの星座", type: "シングル", year: "2026" },
+  { src: "/images/moonlight-window.jpg", title: "窓辺の月光", type: "シングル", year: "2026" },
+  { src: "/images/moon-cloud-cradle.jpg", title: "月雲のゆりかご", type: "シングル", year: "2026" },
   { src: "/images/rain.jpg", title: "Rain (オルゴール)", type: "シングル", year: "2026" },
   { src: "/images/spring-graduation.jpg", title: "春の卒業ソングオルゴール", type: "アルバム", year: "2026" },
   { src: "/images/soothing-ballad.jpg", title: "心やすらぐバラードオルゴール", type: "アルバム", year: "2025" },
   { src: "/images/relaxing-kpop.jpg", title: "リラックスK-POPオルゴール", type: "アルバム", year: "2025" },
   { src: "/images/arigatou.png", title: "ありがとうの音色オルゴール", type: "アルバム", year: "2025" },
-  { src: "/images/shiroi-koibito.png", title: "白い恋人達 (オルゴールカバー)", type: "シングル", year: "2025" },
-  { src: "/images/prema.jpg", title: "Prema (オルゴールカバー)", type: "シングル", year: "2025" },
-  { src: "/images/pretender.jpg", title: "Pretender (オルゴールカバー)", type: "シングル", year: "2025" },
 ];
 
 export default function Services() {
